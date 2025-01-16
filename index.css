@@ -1,0 +1,150 @@
+html, body {
+    margin: 0, auto;
+    padding: 0;
+    width: 550px;
+    font-family: "Inter", serif;
+    position: relative;
+}
+
+.header {
+    height: 210px;
+    background-image: url("/images/film-102681_640.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    /* margin-bottom: 15px; */
+}
+
+h1 {
+    margin: 0;
+    color: white;
+    font-size: 2.625rem;
+}
+
+.watchlist {
+    color: white;
+    text-decoration: none;
+    margin-top: 0.625em;
+    font-size: 0.875rem;
+}
+
+.search {
+    width: 462px;
+    height: 38px;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    position: absolute;
+    top: 11.875em;
+    left: 2.8125em;
+    z-index: 2;
+}
+.enter-film {
+    width: 342px;
+    border: 1px solid #DFDDDD;
+    border-top-left-radius: 0.625em;
+    border-bottom-left-radius: 0.625em;
+    padding-left: 10px;
+}
+.search-btn {
+    width: 120px;
+    border: 1px solid #DFDDDD;
+    border-top-right-radius: 0.625em;
+    border-bottom-right-radius: 0.625em;
+    padding: 0.5em 1em;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.fa-film,
+.empty-result {
+    position: absolute;
+    top: 150px;
+    font-size: 1.125rem;
+    color: #DFDDDD;
+}
+
+.empty-result {
+    margin: 0 115px;
+    text-align: center;
+}
+
+.explore {
+    position: absolute;
+    top: 230px;
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: #DFDDDD;
+}
+
+.movie-content {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 30px 0 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #E5E7EB;
+}
+.movie-content:nth-of-type(1) {
+    padding-top: 20px;
+}
+img {
+    border: 1px solid black;
+    border-radius: 3px;
+    height: 148px;
+    width: 100px;
+    margin-right: 20px;
+}
+.info {
+    flex-direction: column;
+}
+
+.titleAndRating,
+.timeGenreAdd {
+    display: inline-flex;
+    min-width: 300px;
+}
+
+.title {
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: black;
+    margin: 10px 8px 10px 0;
+}
+.rating {
+    margin-top: 13px;
+    margin-bottom: 7px;
+    font-size: 0.75rem;
+    color: #111827;
+}
+
+.runtime,
+.genre,
+.add-btn {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 0.75rem;
+    color: #111827;
+}
+.runtime {
+    margin-right: 20px;
+}
+.genre {
+    margin-right: 30px;
+}
+.add-btn {
+    border: none;
+    background-color: white;
+}
+.plot {
+    font-size: 0.875rem;
+    color: #6B7280;
+} 
+

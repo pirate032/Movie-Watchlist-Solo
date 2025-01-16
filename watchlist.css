@@ -1,0 +1,53 @@
+html, body {
+    margin: 0, auto;
+    padding: 0;
+    width: 550px;
+    font-family: "Inter", serif;
+    position: relative;
+}
+
+.header {
+    height: 210px;
+    background-image: url("/images/film-102681_640.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+h1 {
+    margin: 0;
+    color: white;
+    font-size: 2.625rem;
+}
+
+.search {
+    color: white;
+    text-decoration: none;
+    margin-top: 0.625em;
+    font-size: 0.875rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.explore {
+    position: absolute;
+    top: 150px;
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: #DFDDDD;
+}
+
+.add {
+    position: absolute;
+    top: 200px;
+    text-decoration: none;
+    color: #363636;
+}
