@@ -2,19 +2,19 @@ const watchlist = document.getElementById("watchlist")  //watchlist button
 const enterFilm = document.getElementById("enter-film")
 const searchBtn = document.getElementById("search-btn")
 const content = document.getElementById("content")
-const section = document.getElementsByTagName("section")[2] //where to set new stuff
+const section = document.getElementsByTagName("section")[2] //where to set new elements
 
-const movieTitleArray = []  //the array of titles from first fetch
 const apiKey = "294adf6a"
 const url = "https://www.omdbapi.com/"
-
-let movieDisplay    //the movie info section
-let displayRendered = false //has a search been done yet
-let myWatchlist = []    //array to hold watchlist
 const watchlistFromLocalStorage = JSON.parse(localStorage.getItem("myWatchlist"))
+
+let movieTitleArray = []  //the array of titles from first fetch
+let movieDisplay    //the movie info section
+let displayRendered = false //has a search been done yet?
 
 searchBtn.addEventListener("click", () => {
     movieDisplay = ""
+    movieTitleArray = []
     if(enterFilm.value !== "") {
         content.innerHTML = ``
         //This gets array with title, year, imdbID, type and poster (image)
@@ -28,7 +28,6 @@ searchBtn.addEventListener("click", () => {
                     displayRendered = true
                     setMovieTitleArray(data) //get an array of just the movie titles
                 }
-                
             })
             .catch(error => console.log(error))
     }
@@ -37,15 +36,14 @@ searchBtn.addEventListener("click", () => {
     }
 })
 
-//watchlist button (a tag) displays the watchlist screen (saved movies or blank page text)
 //the add button will need to put that movie into local storage
 section.addEventListener("click", (event) => {
     if(event.target.tagName === 'BUTTON') {
         let clickedId = event.target.id
         let lastChar = clickedId[clickedId.length - 1]
         let titleToSave = movieTitleArray[Number(lastChar)]
-        myWatchlist.push(titleToSave)
-        localStorage.setItem("myWatchlist", JSON.stringify(myWatchlist))
+        watchlistFromLocalStorage.push(titleToSave)
+        localStorage.setItem("myWatchlist", JSON.stringify(watchlistFromLocalStorage))
     }
 })
 
@@ -54,7 +52,6 @@ function setInitialDisplay() {
     content.innerHTML = `
         <i class="fa-solid fa-film fa-5x"></i>
         <p class="explore">Start exploring</p>
-
     `
 }
 

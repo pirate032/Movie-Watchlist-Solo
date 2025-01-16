@@ -14,7 +14,6 @@ html, body {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    /* margin-bottom: 15px; */
 }
 
 h1 {
@@ -41,12 +40,13 @@ h1 {
     left: 2.8125em;
     z-index: 2;
 }
+
 .enter-film {
     width: 342px;
     border: 1px solid #DFDDDD;
     border-top-left-radius: 0.625em;
     border-bottom-left-radius: 0.625em;
-    padding-left: 10px;
+    padding-left: 0.625em;
 }
 .search-btn {
     width: 120px;
@@ -54,7 +54,8 @@ h1 {
     border-top-right-radius: 0.625em;
     border-bottom-right-radius: 0.625em;
     padding: 0.5em 1em;
-}
+    cursor: pointer;
+}    
 
 .content {
     display: flex;
@@ -73,7 +74,7 @@ h1 {
 }
 
 .empty-result {
-    margin: 0 115px;
+    margin: 0 7.1875em;
     text-align: center;
 }
 
@@ -88,19 +89,19 @@ h1 {
 .movie-content {
     display: flex;
     flex-direction: row;
-    margin: 20px 30px 0 30px;
-    padding-bottom: 20px;
+    margin: 1.25em 1.875em 0 1.875em;
+    padding-bottom: 1.25em;
     border-bottom: 1px solid #E5E7EB;
 }
 .movie-content:nth-of-type(1) {
-    padding-top: 20px;
+    padding-top: 1.25em;
 }
 img {
     border: 1px solid black;
     border-radius: 3px;
     height: 148px;
     width: 100px;
-    margin-right: 20px;
+    margin-right: 1.25em;
 }
 .info {
     flex-direction: column;
@@ -116,11 +117,11 @@ img {
     font-size: 1.125rem;
     font-weight: 400;
     color: black;
-    margin: 10px 8px 10px 0;
+    margin: 0.625em 0.5em 0.625em 0;
 }
 .rating {
-    margin-top: 13px;
-    margin-bottom: 7px;
+    margin-top: 0.875em;
+    margin-bottom: 0.5em;
     font-size: 0.75rem;
     color: #111827;
 }
@@ -134,14 +135,15 @@ img {
     color: #111827;
 }
 .runtime {
-    margin-right: 20px;
+    margin-right: 1.25em;
 }
 .genre {
-    margin-right: 30px;
+    margin-right: 1.875em;
 }
 .add-btn {
     border: none;
     background-color: white;
+    cursor: pointer;
 }
 .plot {
     font-size: 0.875rem;
