@@ -8,6 +8,7 @@ const apiKey = "294adf6a"
 const url = "https://www.omdbapi.com/"
 const watchlistFromLocalStorage = JSON.parse(localStorage.getItem("myWatchlist"))
 
+let storedMoviesArray = []
 let movieTitleArray = []  //the array of titles from first fetch
 let movieDisplay    //the movie info section
 let displayRendered = false //has a search been done yet?
@@ -42,8 +43,10 @@ section.addEventListener("click", (event) => {
         let clickedId = event.target.id
         let lastChar = clickedId[clickedId.length - 1]
         let titleToSave = movieTitleArray[Number(lastChar)]
-        watchlistFromLocalStorage.push(titleToSave)
-        localStorage.setItem("myWatchlist", JSON.stringify(watchlistFromLocalStorage))
+        storedMoviesArray = [...watchlistFromLocalStorage]  //Because Netlify wouldn't push to local storage directly
+        console.log(storedMoviesArray)
+        storedMoviesArray.push(titleToSave)
+        localStorage.setItem("myWatchlist", JSON.stringify(storedMoviesArray))
     }
 })
 
