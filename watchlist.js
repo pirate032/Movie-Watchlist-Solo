@@ -25,6 +25,7 @@ section.addEventListener("click", (event) => {
         myWatch.splice(Number(lastChar),1)
         localStorage.clear()
         localStorage.setItem("myWatchlist", JSON.stringify(myWatch))
+        // alert("Movie removed from watchlist")
         if(myWatch.length !== 0) {   //if something left in the watchlist, get the movie info
             getMovieInfo(myWatch)
         }
@@ -55,6 +56,7 @@ function getMovieInfo(myList) {
                 setHTML(data, index)
                 content.innerHTML = listDisplay
             })
+            .catch(error => console.log(error))
     })
 }
 
