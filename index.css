@@ -21,7 +21,9 @@ h1 {
     color: white;
     font-size: 2.625rem;
 }
-
+h4 {
+    color: white;
+}
 .watchlist {
     color: white;
     text-decoration: none;

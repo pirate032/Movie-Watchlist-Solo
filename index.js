@@ -3,6 +3,7 @@ const enterFilm = document.getElementById("enter-film")
 const searchBtn = document.getElementById("search-btn")
 const content = document.getElementById("content")
 const section = document.getElementsByTagName("section")[2] //where to set new elements
+const movieAdded = document.getElementById("movie-added")
 
 const apiKey = "294adf6a"
 const url = "https://www.omdbapi.com/"
@@ -45,6 +46,13 @@ section.addEventListener("click", (event) => {
         watchlistFromLocalStorage.push(titleToSave)
         localStorage.setItem("myWatchlist", JSON.stringify(watchlistFromLocalStorage))
         // alert("Movie added to watchlist")
+        if(movieTitleArray.includes(`${titleToSave}`)) {
+            //call routine to briefly display success message
+            movieAdded.style.display = "inline"
+            setTimeout(function() {
+                movieAdded.style.display = "none"
+            },2000)
+        }
     }
 })
 
