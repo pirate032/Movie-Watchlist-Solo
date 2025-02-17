@@ -7,11 +7,16 @@ const movieAdded = document.getElementById("movie-added")
 
 const apiKey = "294adf6a"
 const url = "https://www.omdbapi.com/"
-const watchlistFromLocalStorage = JSON.parse(localStorage.getItem("myWatchlist"))
 
+let watchlistFromLocalStorage = []
 let movieTitleArray = []  //the array of titles from first fetch
 let movieDisplay    //the movie info section
 let displayRendered = false //has a search been done yet?
+
+//only update the variable if there is something in the watchlist
+if(JSON.parse(localStorage.getItem("myWatchlist")) !== null){
+    watchlistFromLocalStorage = JSON.parse(localStorage.getItem("myWatchlist"))
+}
 
 searchBtn.addEventListener("click", () => {
     movieDisplay = ""
